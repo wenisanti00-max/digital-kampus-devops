@@ -4,7 +4,7 @@ Repositori ini memuat implementasi cetak biru (blueprint) untuk migrasi Sistem A
 
 ## 🌐 1. Diagram Arsitektur Cloud (Multi-AZ & Auto Scaling)
 
-mermaid
+```mermaid
 graph TD
     User([Mahasiswa / Dosen / Staf]) --> DNS[DNS + CDN + WAF]
     DNS --> ALB[Application Load Balancer]
@@ -32,11 +32,11 @@ graph TD
             ASG1 & ASG2 & ASGn --> DB_Replica
         end
     end
-
+```
 
 ## 🚀 2. Diagram Pipeline CI/CD
 
-mermaid
+```mermaid
 graph LR
     A[1. Push / PR] --> B[2. Build & Package]
     B --> C[3. Automated Testing]
@@ -54,11 +54,11 @@ graph LR
     end
     
     F -.->|Umpan Balik Bug| A
-
+```
 
 ## 🤝 3. Alur Kerja Kolaborasi Tim (GitHub Flow)
 
-mermaid
+```mermaid
 sequenceDiagram
     autonumber
     actor PO as Product Owner
@@ -75,3 +75,4 @@ sequenceDiagram
     Tester->>Dev: Uji Ulang Berhasil & Approve PR (QA-passed)
     Ops->>Ops: Periksa kesiapan backup & rollback
     Ops->>Dev: Merge PR ke branch main (Otomatis Deploy)
+```
